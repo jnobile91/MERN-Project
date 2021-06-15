@@ -17,5 +17,5 @@ Server package.json lines must be changed/included:
   }
 
 
-  Command to start application:
-  npm start
+Command to start application:
+npm start
