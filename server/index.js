@@ -8,7 +8,6 @@ const app = express();
 app.use('/students', studentRoutes);
 app.use(express.json({limit: "20mb", extended: true}));
 app.use(express.urlencoded({limit: "20mb", extended: true}));
-
 app.use(cors());
 
 // Lines 14-23 are necessary to establish a connection to MongoDB
