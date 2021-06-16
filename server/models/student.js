@@ -2,14 +2,13 @@ import mongoose from 'mongoose';
 
 // Creates Mongoose schema for student
 const studentSchema = mongoose.Schema({
-    registrationNumber: Number,
+    regId: Number,
     name: String,
     grade: String,
     section: {
         type: String,
         default: 'NULL'
-    },
-    subjects: [String]
+    }
 });
 
 // Creates student model

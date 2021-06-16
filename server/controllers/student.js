@@ -1,12 +1,13 @@
-// I use an async/await method since this method can
-// potentially return a lot of data
+import StudentData from '../models/student.js';
+
+// I use an async/await method since this method can potentially return a lot of data
 // HTTP status codes are found at httpstatuses.com
 
 // Function returns students
 export const getStudents = async(req, res) => {
     try {
         // Fetches existing students
-        const allStudents = await student.find();
+        const allStudents = await StudentData.find();
 
         // Returns data from the variable allStudents
         res.status(200).json(allStudents);
@@ -22,12 +23,12 @@ export const createStudent = async(req, res) => {
     const student = req.body;
 
     // Calls student model
-    // First 'student' is the model
+    // First 'StudentData' is the model
     // Second 'student' is the variable declared above
-    const newStudent = new student(student);
+    const newStudent = new StudentData(student);
 
     try {
-        // Attempts to save the new student to the json
+        // Attempts to save the new student as a json file
         await newStudent.save();
         res.status(201).json(newStudent);
     } catch (error) {

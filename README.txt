@@ -16,6 +16,9 @@ Server package.json lines must be changed/included:
     "start": "nodemon index.js"
   }
 
+INSTALL FRONT-END LIBRARY ON CLIENT SIDE:
+npm install @material-ui/core
+npm install axios --save
 
 Command to start application:
 npm start
