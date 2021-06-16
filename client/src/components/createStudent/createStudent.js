@@ -26,8 +26,11 @@ export default function Create() {
 
     // Posts the data to the back-end/server at designated port 5000
     // Pulls function from the server-side controller
+    // The THEN statement has the table refresh upon a new entry being added
     const createStudent = () => {
-        axios.post('http://localhost:5000/students', student)
+        axios.post('http://localhost:5000/students', student).then(() => {
+            window.location.reload(false);
+        })
     }
 
     return (

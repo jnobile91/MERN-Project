@@ -20,5 +20,8 @@ INSTALL FRONT-END LIBRARY ON CLIENT SIDE:
 npm install @material-ui/core
 npm install axios --save
 
+INSTALL ICONS
+npm install @material-ui/icons
+
 Command to start application:
 npm start
