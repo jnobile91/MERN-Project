@@ -23,6 +23,14 @@ export default function ShowStudent() {
 
     const [studentsList, setStudentList] = useState([]);
 
+    // Uses tilda to allow the program to pass the id value to delete one record,
+    // preventing the delete button from deleting everything in the table.
+    const deleteStudent = (id) => {
+        axios.delete(`http://localhost:5000/students/${id}`).then(() => {
+            window.location.reload(false);
+        })
+    };
+
     // useEffect function is a React hook that calls itself when the page refreshes/reloads
     useEffect(() => {
         axios.get('http://localhost:5000/students').then((allStudents) => {
@@ -54,7 +62,7 @@ export default function ShowStudent() {
                         <TableCell align="center">{student.grade}</TableCell>
                         <TableCell align="center">{student.section}</TableCell>
                         <TableCell align="center">
-                            <IconButton aria-label="delete" className={classes.margin}>
+                            <IconButton aria-label="delete" className={classes.margin} onClick={() => deleteStudent(student._id)} >
                                 <DeleteIcon fontSize="small" />
                             </IconButton>
                         </TableCell>
