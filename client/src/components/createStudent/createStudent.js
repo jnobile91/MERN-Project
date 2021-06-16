@@ -36,20 +36,18 @@ export default function Create() {
         <form className={classes.root} noValidate autoComplete="off">
             <TextField id="outlined-basic" label="Registration ID" variant="outlined" value={student.regId} onChange={(event) => {
                 setStudent({ ...student, regId: event.target.value })
-            }}/>
+            }} />
             <TextField id="outlined-basic" label="Name" variant="outlined" value={student.name} onChange={(event) => {
                 setStudent({ ...student, name: event.target.value })
-            }}/>
+            }} />
             <TextField id="outlined-basic" label="Grade" variant="outlined" value={student.grade} onChange={(event) => {
                 setStudent({ ...student, grade: event.target.value })
-            }}/>
+            }} />
             <TextField id="outlined-basic" label="Section" variant="outlined" value={student.section} onChange={(event) => {
                 setStudent({ ...student, section: event.target.value })
-            }}/>
+            }} />
 
-            <Button variant="contained" color="primary" onClick={(createStudent) => {
-                
-            }}>
+            <Button variant="contained" color="primary" onClick={createStudent} >
                 Create
             </Button>
         </form>
