@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Create() {
     const classes = useStyles();
 
+    // Establishes student object and assigns default values
     const [student, setStudent] = useState({
         regId: 0,
         name: '',
